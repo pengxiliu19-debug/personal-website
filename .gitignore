@@ -1,0 +1,13 @@
+node_modules/
+dist/
+reference/
+.env
+.env.*
+!.env.example
+resume-image.png
+# Local portrait alternatives; publish only the selected portrait.
+public/assets/portrait.png
+public/assets/portrait-retouched.png
+*.tsbuildinfo
+qa/
+*.log
