@@ -11,3 +11,5 @@ public/assets/portrait-retouched.png
 *.tsbuildinfo
 qa/
 *.log
+.local/
+ASSET_NOTES.md

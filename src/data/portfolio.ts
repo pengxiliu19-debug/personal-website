@@ -12,15 +12,15 @@ export const projects: Project[] = [
     tags: ['React', 'TypeScript', 'Gemini API'],
     description: '把黑胶唱片的仪式感与 AI 对话结合，做一个可以交流的音乐电台。',
     problem: '探索如何把自然语言音乐搜索、推荐与播放器体验整合在同一个界面里。',
-    solution: ['用 React + TypeScript 构建响应式界面，以黑胶唱片作为主要视觉与交互元素。', '使用 Express 对接 Gemini API，连接自然语言输入与音乐搜索、推荐功能。', '根据简历记录，项目由个人独立完成前后端开发与部署。'],
+    solution: ['用 React + TypeScript 构建响应式界面，以黑胶唱片作为主要视觉与交互元素。', '使用 Express 对接 Gemini API，连接自然语言输入与音乐搜索、推荐功能。', '独立完成前后端开发与部署。'],
     takeaway: '关注从用户表达需求，到得到反馈、播放音乐的完整体验，而不只是一张播放器页面。',
   },
   {
     id: 'interview', number: '02', title: 'AI 面试训练系统', subtitle: '下一次面试，多一点底气。', category: 'AI 应用', date: '2025.06',
-    tags: ['React', 'LLM API', '语音识别'],
+    tags: ['React', 'Node.js', 'SQLite'],
     description: '模拟面试、动态追问与逐题复盘，让练习有反馈、有方向。',
     problem: '为缺少真实面试练习机会的求职者，提供可以反复练习和复盘的模拟场景。',
-    solution: ['覆盖技术面、行为面、群面等场景，使用大模型生成问题与动态追问。', '提供语音和文字两种输入方式。', '围绕逻辑性、流畅度和技术深度提供反馈，并支持逐题复盘。'],
+    solution: ['覆盖技术面、行为面与群面情境，按岗位和难度组织题目，并根据回答线索追问。', '支持文字输入与浏览器语音识别，提供草稿恢复、跳过和暂存继续。', '保存练习记录，围绕表达结构、举例和验证依据提供规则反馈，并支持逐题复盘和报告导出。'],
     takeaway: 'AI 功能的价值需要通过清晰的流程和可理解的反馈传递给用户。',
   },
   {
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     tags: ['ComfyUI', 'Stable Diffusion', 'LoRA'],
     description: '围绕海上丝绸之路与戏曲文化，探索 AI 数字艺术的表达方式。',
     problem: '尝试将岭南地域文化与生成式图像工具结合，完成主题化的数字艺术创作。',
-    solution: ['简历记录使用了 Stable Diffusion、ComfyUI、LoRA 与 ControlNet。', '创作主题围绕海上丝绸之路和戏曲文化展开。', '参加传智杯 AIGC 创新挑战赛并获得国赛奖项；具体个人分工待补充。'],
+    solution: ['使用 Stable Diffusion、ComfyUI、LoRA 与 ControlNet 探索数字艺术表达。', '创作主题围绕海上丝绸之路和戏曲文化展开。', '参加传智杯 AIGC 创新挑战赛并获得国赛奖项。'],
     takeaway: '这段经历开启了我对 AI 创作工具和应用体验的持续兴趣。',
   },
 ]

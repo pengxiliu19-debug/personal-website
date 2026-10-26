@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { ArrowUpRight, ArrowDown, ArrowRight, Code2, Sparkles, Menu, X, Download, Mail, Copy, Check, Disc3, MapPin, GraduationCap, ExternalLink, ChevronRight, WandSparkles, AudioLines, Braces, Globe, Trophy } from 'lucide-react'
+import { ArrowUpRight, ArrowDown, ArrowRight, Code2, Sparkles, Menu, X, Download, Mail, Copy, Check, Disc3, MapPin, GraduationCap, ChevronRight, WandSparkles, AudioLines, Braces, Globe, Trophy } from 'lucide-react'
 import { profile, projects, type Category, type Project } from './data/portfolio'
 
 const categories: Category[] = ['全部项目', 'AI 应用', '前端交互', 'AIGC 创作']
@@ -28,7 +28,7 @@ function ProjectArt({ id, compact = false }: { id: string; compact?: boolean }) 
       <span className="art-topline">CULTURE × GENERATIVE ART <WandSparkles size={17} /></span>
       <div className="culture-orbit orbit-one" /><div className="culture-orbit orbit-two" /><div className="culture-title"><span>岭南</span><b>NEW<br />PERSPECTIVES.</b></div><span className="culture-seal">海上<br />丝路</span><span className="art-caption">TRADITION, REIMAGINED.</span>
     </>}
-    {!compact && <span className="illustration-label">界面概念示意 · 非原项目截图</span>}
+
   </div>
 }
 
@@ -117,7 +117,7 @@ export default function App() {
     <footer className="footer section-shell"><a className="brand" href="#">LPX<span>.</span>STUDIO</a><span>© {new Date().getFullYear()} 刘鹏熙 · 保持好奇，持续创造。</span><a className="back-top" href="#">BACK TO TOP ↑</a></footer>
 
     <dialog ref={dialog} className="project-dialog" onCancel={() => setSelected(null)} onClose={() => setSelected(null)} onClick={event => { if (event.target === event.currentTarget) setSelected(null) }} aria-labelledby="dialog-title">
-      {selected && <><button className="dialog-close" onClick={() => setSelected(null)} aria-label="关闭项目详情"><X size={23} /></button><ProjectArt id={selected.id} /><div className="dialog-body"><div className="project-meta"><span>{selected.category} / PROJECT {selected.number}</span><span>{selected.date}</span></div><h2 id="dialog-title">{selected.title}</h2><p className="dialog-subtitle">{selected.subtitle}</p><div className="project-tags">{selected.tags.map(tag => <span key={tag}>{tag}</span>)}</div><div className="case-section"><h3><span>01</span> 项目的出发点</h3><p>{selected.problem}</p></div><div className="case-section"><h3><span>02</span> 实现与探索</h3><ul>{selected.solution.map(item => <li key={item}><ChevronRight size={17} />{item}</li>)}</ul></div><div className="case-takeaway"><Sparkles size={22} /><p>{selected.takeaway}</p></div><div className="demo-note"><ExternalLink size={16} /><span>真实截图、仓库与体验链接将在整理后补充。</span></div><a className="button button-dark" href={`mailto:${profile.email}?subject=${encodeURIComponent(`想了解项目：${selected.title}`)}`}>聊聊这个项目 <ArrowRight size={18} /></a></div></>}
+      {selected && <><button className="dialog-close" onClick={() => setSelected(null)} aria-label="关闭项目详情"><X size={23} /></button><ProjectArt id={selected.id} /><div className="dialog-body"><div className="project-meta"><span>{selected.category} / PROJECT {selected.number}</span><span>{selected.date}</span></div><h2 id="dialog-title">{selected.title}</h2><p className="dialog-subtitle">{selected.subtitle}</p><div className="project-tags">{selected.tags.map(tag => <span key={tag}>{tag}</span>)}</div><div className="case-section"><h3><span>01</span> 项目的出发点</h3><p>{selected.problem}</p></div><div className="case-section"><h3><span>02</span> 实现与探索</h3><ul>{selected.solution.map(item => <li key={item}><ChevronRight size={17} />{item}</li>)}</ul></div><div className="case-takeaway"><Sparkles size={22} /><p>{selected.takeaway}</p></div><a className="button button-dark" href={`mailto:${profile.email}?subject=${encodeURIComponent(`想了解项目：${selected.title}`)}`}>聊聊这个项目 <ArrowRight size={18} /></a></div></>}
     </dialog>
   </>
 }
